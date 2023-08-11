@@ -1,4 +1,5 @@
-import { Link, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import { Button, Link, Menu, MenuButton, MenuItem, MenuList, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
@@ -6,7 +7,52 @@ export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
   const { colorMode } = useColorMode()
   const { pathname } = useLocation()
 
-  return (
+  return text === 'Projects' ? (
+    <Menu>
+      <MenuButton
+        as={Button}
+        rightIcon={<ChevronDownIcon />}
+        textDecoration={pathname.includes('projects') ? 'underline' : 'none'}
+        activeStyle={{
+          background: colorMode === 'light' ? '#000' : '#252424e0',
+          color: '#fff',
+        }}
+        background="none"
+        _hover={{ background: navLinkBgHover, color: '#fff' }}
+      >
+        Projects
+      </MenuButton>
+      <MenuList>
+        <MenuItem
+          as="a"
+          href="/digital-projects"
+          _hover={{ background: navLinkBgHover, color: '#fff' }}
+          color={`mode.${colorMode}.color`}
+          textDecoration={pathname === '/digital-projects' ? 'underline' : 'none'}
+        >
+          Digital
+        </MenuItem>
+        <MenuItem
+          as="a"
+          href="/physical-projects"
+          _hover={{ background: navLinkBgHover, color: '#fff' }}
+          color={`mode.${colorMode}.color`}
+          textDecoration={pathname === '/physical-projects' ? 'underline' : 'none'}
+        >
+          Physical
+        </MenuItem>
+        <MenuItem
+          as="a"
+          href="/design-projects"
+          _hover={{ background: navLinkBgHover, color: '#fff' }}
+          color={`mode.${colorMode}.color`}
+          textDecoration={pathname === '/design-projects' ? 'underline' : 'none'}
+        >
+          Design
+        </MenuItem>
+      </MenuList>
+    </Menu>
+  ) : (
     <Link
       as={NavLink}
       exact

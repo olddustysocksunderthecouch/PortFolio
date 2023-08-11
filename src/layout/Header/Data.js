@@ -8,12 +8,8 @@ export const TOP_NAV_LINKS = [
     text: 'About',
   },
   {
-    link: '/digital-projects',
-    text: 'Digital Projects',
-  },
-  {
-    link: '/physical-projects',
-    text: 'Physical Projects',
+    link: '/projects',
+    text: 'Projects',
   },
   {
     link: '/contact',
