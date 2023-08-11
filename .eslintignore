@@ -1,0 +1,5 @@
+*.png
+*.svg
+package-lock.json
+public/
+README.md
