@@ -12,7 +12,7 @@ const iconProps = {
   isRound: true,
 }
 
-const Header = () => {
+export const Header = () => {
   const [show, setShow] = useState(false)
   const handleToggle = () => setShow(!show)
   const { colorMode, toggleColorMode } = useColorMode()
@@ -68,5 +68,3 @@ const Header = () => {
     </Flex>
   )
 }
-
-export default Header

@@ -1,4 +1,4 @@
-const customColors = {
+export const customColors = {
   transparent: 'transparent',
   black: '#000',
   white: '#fff',
@@ -129,5 +129,3 @@ const customColors = {
     },
   },
 }
-
-export default customColors

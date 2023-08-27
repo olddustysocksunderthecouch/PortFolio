@@ -8,17 +8,9 @@ const iconProps = {
   isRound: true,
 }
 
-const Footer = (props) => {
+export const Footer = (props) => {
   return (
-    <Stack
-      as="footer"
-      direction={'row'}
-      spacing={[1, 2]}
-      p={4}
-      justifyContent="center"
-      alignItems="center"
-      {...props}
-    >
+    <Stack as="footer" direction={'row'} spacing={[1, 2]} p={4} justifyContent="center" alignItems="center" {...props}>
       {SITE_CONFIG.author.accounts.map((sc) => (
         <IconButton
           key={sc.url}
@@ -35,5 +27,3 @@ const Footer = (props) => {
     </Stack>
   )
 }
-
-export default Footer

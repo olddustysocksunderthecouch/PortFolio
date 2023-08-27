@@ -1,12 +1,12 @@
 import { theme } from '@chakra-ui/react'
-import customIcons from './IconPaths'
-import customColors from './CustomColors'
+import { iconPaths } from './IconPaths'
+import { customColors } from './CustomColors'
 
 export const customTheme = {
   ...theme,
   icons: {
     ...theme.icons,
-    ...customIcons,
+    ...iconPaths,
   },
   colors: {
     ...theme.colors,
