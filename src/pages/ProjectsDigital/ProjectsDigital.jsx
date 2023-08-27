@@ -1,9 +1,9 @@
 import React from 'react'
 import { Heading, Spacer, Stack, Text, useColorMode } from '@chakra-ui/react'
-import { ProjectItem } from './DigitalProjectItem'
+import { ProjectDesignItem } from './ProjectDesignItem'
 import { PROJECT_DATA } from './Data'
 
-export const DigitalProjects = () => {
+export const ProjectsDigital = () => {
   const { colorMode } = useColorMode()
 
   return (
@@ -32,7 +32,7 @@ export const DigitalProjects = () => {
       </Stack>
       <Spacer />
       {PROJECT_DATA.map((project, index) => (
-        <ProjectItem
+        <ProjectDesignItem
           key={index}
           title={project.title}
           desc={project.desc}

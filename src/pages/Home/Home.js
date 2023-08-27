@@ -58,13 +58,16 @@ export const Home = () => {
         some were for others.
       </Text>
       <Stack spacing={4} direction="row" align="center">
-        <Button colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/projects">
+        <Button as="a" colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/projects-digital">
           Digital
         </Button>
-        <Button colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/opensource">
+        <Button as="a" colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/projects-physical">
           Physical
         </Button>
-        <Button colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/opensource">
+        <Button as="a" colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/projects-design">
+          Design
+        </Button>
+        <Button as="a" colorScheme="teal" variant="outline" size="lg" mt="1rem" mb="1rem" href="/projects-community">
           Community
         </Button>
       </Stack>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Heading, Spacer, Stack, Text, useColorMode } from '@chakra-ui/react'
-import { ProjectItem } from './PhysicalProjectItem'
+import { ProjectPhysicalItem } from './ProjectPhysicalItem'
 import { PROJECT_DATA } from './Data'
 
-export const PhysicalProjects = () => {
+export const ProjectsPhysical = () => {
   const { colorMode } = useColorMode()
 
   return (
@@ -22,8 +22,8 @@ export const PhysicalProjects = () => {
       </Heading>
       <Stack as="flex" pb="1em">
         <Text color={`mode.${colorMode}.subtext`}>
-          I love to design and build things! Some have succeeded and others have failed. The joy that comes from
-          creating something useful and learning is what keeps me going!
+          As much as I love building software I also love getting my hands dirty and build physical things! Here are a
+          few of my projects from the last two years.
         </Text>
         <Text color={`mode.${colorMode}.subtext`}>
           My main passion is building software that helps people. When I'm not coding, I love designing and building
@@ -32,12 +32,12 @@ export const PhysicalProjects = () => {
       </Stack>
       <Spacer />
       {PROJECT_DATA.map((project, index) => (
-        <ProjectItem
+        <ProjectPhysicalItem
           key={index}
           title={project.title}
           desc={project.desc}
           tech={project.tech}
-          image={project.image}
+          images={project.images}
           colorMode={colorMode}
         />
       ))}

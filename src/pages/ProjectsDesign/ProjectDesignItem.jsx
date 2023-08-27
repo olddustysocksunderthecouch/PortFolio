@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, Stack, Heading, Flex, Text, Tag, Image, useColorMode, Grid, Skeleton } from '@chakra-ui/react'
+import { Box, Stack, Heading, Flex, Text, Tag, Image, useColorMode, Grid } from '@chakra-ui/react'
+import ImageGallery from 'react-image-gallery'
 
-export const ProjectItem = ({ title, desc, tech, image }) => {
+export const ProjectDesignItem = ({ title, desc, images }) => {
   const { colorMode } = useColorMode()
 
   return (
@@ -16,13 +17,14 @@ export const ProjectItem = ({ title, desc, tech, image }) => {
       >
         <Box w="100%">
           <Stack mt={2}>
-            <Text fontWeight="semibold" lineHeight="short" color={`mode.${colorMode}.subtext`}>
+            <Box fontWeight="semibold" lineHeight="short" color={`mode.${colorMode}.subtext`}>
               {desc}
-            </Text>
+            </Box>
           </Stack>
         </Box>
         <Flex w="100%" h="100%" alignItems="center" ml={{ sm: '0', md: '4' }} pt={{ sm: '4', md: '0' }}>
-          <Image src={image} fallback={<Skeleton />} objectFit="cover" borderRadius={'16'}/>
+          <ImageGallery items={images} showBullets showPlayButton={false} />
+          {/* <Image src={image} fallback={<Skeleton />} objectFit="cover" borderRadius={'16'} /> */}
         </Flex>
       </Grid>
     </Stack>

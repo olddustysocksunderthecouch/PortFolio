@@ -33,7 +33,7 @@ const Header = () => {
     >
       <Flex justifyContent={'stretch'} width={{ sm: '100%', md: '52rem' }} flexDirection={{ sm: 'column', md: 'row' }}>
         <Flex align="center" justifyContent="space-between" mr={{ md: '16' }} width={{ sm: '100%', md: '8' }}>
-          <Avatar name="Adrian Bunge" size="lg" src={profileCartoon} />
+          <Avatar size="lg" src={profileCartoon} />
           <Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
             <FiMenu fontSize="2.5rem" color={colorMode === 'light' ? '#000' : '#fff'} />
           </Box>

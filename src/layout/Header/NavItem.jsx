@@ -25,30 +25,39 @@ export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
       <MenuList>
         <MenuItem
           as="a"
-          href="/digital-projects"
+          href="/projects-digital"
           _hover={{ background: navLinkBgHover, color: '#fff' }}
           color={`mode.${colorMode}.color`}
-          textDecoration={pathname === '/digital-projects' ? 'underline' : 'none'}
+          textDecoration={pathname === '/projects-digital' ? 'underline' : 'none'}
         >
           Digital
         </MenuItem>
         <MenuItem
           as="a"
-          href="/physical-projects"
+          href="/projects-physical"
           _hover={{ background: navLinkBgHover, color: '#fff' }}
           color={`mode.${colorMode}.color`}
-          textDecoration={pathname === '/physical-projects' ? 'underline' : 'none'}
+          textDecoration={pathname === '/projects-physical' ? 'underline' : 'none'}
         >
           Physical
         </MenuItem>
         <MenuItem
           as="a"
-          href="/design-projects"
+          href="/projects-design"
           _hover={{ background: navLinkBgHover, color: '#fff' }}
           color={`mode.${colorMode}.color`}
-          textDecoration={pathname === '/design-projects' ? 'underline' : 'none'}
+          textDecoration={pathname === '/projects-design' ? 'underline' : 'none'}
         >
           Design
+        </MenuItem>{' '}
+        <MenuItem
+          as="a"
+          href="/projects-community"
+          _hover={{ background: navLinkBgHover, color: '#fff' }}
+          color={`mode.${colorMode}.color`}
+          textDecoration={pathname === '/projects-community' ? 'underline' : 'none'}
+        >
+          Community
         </MenuItem>
       </MenuList>
     </Menu>

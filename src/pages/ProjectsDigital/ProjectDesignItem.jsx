@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack, Heading, Flex, Text, Tag, Image, useColorMode, Grid, Skeleton } from '@chakra-ui/react'
 
-export const ProjectItem = ({ title, desc, tech, image }) => {
+export const ProjectDesignItem = ({ title, desc, tech, image }) => {
   const { colorMode } = useColorMode()
 
   return (
@@ -9,10 +9,7 @@ export const ProjectItem = ({ title, desc, tech, image }) => {
       <Heading as="h2" size="xl" color={`mode.${colorMode}.career.text`}>
         {title}
       </Heading>
-      <Grid
-        gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}
-        rounded="md"
-      >
+      <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']} rounded="md">
         <Box w="100%">
           <Stack mt={2}>
             <Text fontSize="lg" fontWeight="semibold" lineHeight="short" color={`mode.${colorMode}.subtext`}>
