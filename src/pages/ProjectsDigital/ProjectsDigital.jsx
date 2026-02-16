@@ -19,7 +19,7 @@ export const ProjectsDigital = () => {
       px="1.5rem"
     >
       <SeoHead pageKey="projectsDigital" />
-      <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
+      <Heading Heading as="h1" size={{ base: '3xl', md: '4xl' }} color={`mode.${colorMode}.text`}>
         Digital Projects
       </Heading>
       <Stack as="flex" pb="1em">

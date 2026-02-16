@@ -7,7 +7,7 @@ export const ProjectPhysicalItem = ({ title, desc, images }) => {
 
   return (
     <Stack marginBottom={5}>
-      <Heading as="h2" size="xl" color={`mode.${colorMode}.career.text`}>
+      <Heading as="h2" size={{ base: 'lg', md: 'xl' }} color={`mode.${colorMode}.career.text`}>
         {title}
       </Heading>
       <Grid

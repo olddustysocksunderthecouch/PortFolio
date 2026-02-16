@@ -30,7 +30,7 @@ export const ProjectDesignItem = ({ title, desc, tech, image, links = [] }) => {
 
   return (
     <Stack marginBottom={5}>
-      <Heading as="h2" size="xl" color={`mode.${colorMode}.career.text`}>
+      <Heading as="h2" size={{ base: 'lg', md: 'xl' }} color={`mode.${colorMode}.career.text`}>
         {title}
       </Heading>
       <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']} rounded="md">

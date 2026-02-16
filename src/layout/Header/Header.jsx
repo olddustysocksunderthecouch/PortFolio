@@ -24,22 +24,32 @@ export const Header = () => {
       as="nav"
       alignContent="center"
       width={'100%'}
-      padding="1.5rem"
+      padding={{ base: '1rem', md: '1.5rem' }}
       boxShadow="sm"
       backgroundColor={navLinkBg}
-      justifyContent={{ sm: 'stretch', md: 'center' }}
+      justifyContent={{ base: 'stretch', md: 'center' }}
       zIndex={10}
     >
-      <Flex justifyContent={'stretch'} width={{ sm: '100%', md: '52rem' }} flexDirection={{ sm: 'column', md: 'row' }}>
-        <Flex align="center" justifyContent="space-between" mr={{ md: '16' }} width={{ sm: '100%', md: '8' }}>
-          <Avatar size="lg" src={profileCartoon} />
-          <Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
-            <FiMenu fontSize="2.5rem" color={colorMode === 'light' ? '#000' : '#fff'} />
-          </Box>
+      <Flex justifyContent={'stretch'} width={{ base: '100%', md: '52rem' }} flexDirection={{ base: 'column', md: 'row' }}>
+        <Flex align="center" justifyContent="space-between" mr={{ md: '16' }} width={{ base: '100%', md: '8' }}>
+          <Avatar
+            src={profileCartoon}
+            boxSize={{ base: '2.5rem', sm: '2.8rem', md: '3rem' }}
+          />
+          <IconButton
+            aria-label="Toggle navigation menu"
+            icon={<FiMenu />}
+            onClick={handleToggle}
+            display={{ base: 'inline-flex', md: 'none' }}
+            variant="ghost"
+            isRound
+            size="md"
+            fontSize="1.15rem"
+          />
         </Flex>
         <Box
-          display={{ sm: show ? 'block' : 'none', md: 'flex' }}
-          width={{ sm: '100%', md: 'auto' }}
+          display={{ base: show ? 'block' : 'none', md: 'flex' }}
+          width={{ base: '100%', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
         >
@@ -53,7 +63,7 @@ export const Header = () => {
           ))}
         </Box>
 
-        <Box display={{ sm: 'none', md: 'block' }} mt="0.5rem" align="center">
+        <Box display={{ base: 'none', md: 'block' }} mt="0.5rem" align="center">
           <IconButton
             aria-label="Color Mode"
             icon={colorMode === 'light' ? <FaMoon /> : <FiSun />}
