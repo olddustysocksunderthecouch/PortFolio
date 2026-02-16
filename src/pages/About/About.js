@@ -18,7 +18,7 @@ export const About = () => {
       paddingTop="10rem"
     >
       <SeoHead pageKey="about" />
-      <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
+      <Heading Heading as="h1" size={{ base: '3xl', md: '2xl' }} color={`mode.${colorMode}.text`}>
         About Me
       </Heading>
       <Stack spacing={2} marginBottom={8}>
@@ -48,7 +48,7 @@ export const About = () => {
               textUnderlineOffset="2px"
               _hover={{
                 color: colorMode === 'light' ? 'primary.700' : 'primary.200',
-                textDecorationThickness: '2px'
+                textDecorationThickness: '2px',
               }}
             >
               FindHomes
@@ -63,7 +63,7 @@ export const About = () => {
               textUnderlineOffset="2px"
               _hover={{
                 color: colorMode === 'light' ? 'primary.700' : 'primary.200',
-                textDecorationThickness: '2px'
+                textDecorationThickness: '2px',
               }}
             >
               Read it here!

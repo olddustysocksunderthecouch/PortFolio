@@ -20,7 +20,7 @@ export const Community = () => {
       paddingTop="10rem"
     >
       <SeoHead pageKey="community" />
-      <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
+      <Heading Heading as="h1" size={{ base: '3xl', md: '2xl' }} color={`mode.${colorMode}.text`}>
         Community
       </Heading>
       <Stack spacing={2} marginBottom={8}>

@@ -17,7 +17,7 @@ import { Text } from '@chakra-ui/react'
 export const PROJECT_DATA = [
 
   {
-    title: 'Hydroponics!',
+    title: 'Hydroponics',
     desc: 'Over the last few months I\'ve built four hydroponics systems to grow my own food. I\'ve tried dutch bucket, NFT (Nutrient Film Technique), rain gutter grow system and Kratky. I love how much faster plants grow in a hydroponics system than in a traditional garden. There\'s nothing like harvesting and eating a cucumber from your own garden! ',
     images: [{ original: hydroponics1 }, { original: hydroponics2 }, { original: hydroponics3 }],
   },
