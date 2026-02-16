@@ -1,5 +1,6 @@
 import React from 'react'
 import { Stack, Heading, Text, Image, Link, useColorMode } from '@chakra-ui/react'
+import { SeoHead } from '../../components/SeoHead'
 import profileImage from './assets/profileImage.jpeg'
 
 export const About = () => {
@@ -16,6 +17,7 @@ export const About = () => {
       maxWidth="48rem"
       paddingTop="10rem"
     >
+      <SeoHead pageKey="about" />
       <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
         About Me
       </Heading>
@@ -41,11 +43,11 @@ export const About = () => {
             <Link
               href="https://www.findhomes.co.za"
               isExternal
-              color={colorMode === 'light' ? 'blue.600' : 'blue.300'}
+              color={`mode.${colorMode}.link`}
               textDecoration="underline"
               textUnderlineOffset="2px"
               _hover={{
-                color: colorMode === 'light' ? 'blue.700' : 'blue.200',
+                color: colorMode === 'light' ? 'primary.700' : 'primary.200',
                 textDecorationThickness: '2px'
               }}
             >
@@ -56,11 +58,11 @@ export const About = () => {
             <Link
               href="https://book.findhomes.co.za/8laws"
               isExternal
-              color={colorMode === 'light' ? 'blue.600' : 'blue.300'}
+              color={`mode.${colorMode}.link`}
               textDecoration="underline"
               textUnderlineOffset="2px"
               _hover={{
-                color: colorMode === 'light' ? 'blue.700' : 'blue.200',
+                color: colorMode === 'light' ? 'primary.700' : 'primary.200',
                 textDecorationThickness: '2px'
               }}
             >

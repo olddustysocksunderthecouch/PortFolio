@@ -1,5 +1,6 @@
 import React from 'react'
 import { Stack, Heading, Text, Image, Spacer, useColorMode } from '@chakra-ui/react'
+import { SeoHead } from '../../components/SeoHead'
 import communityImage from './assets/communityImage.jpg'
 import { COMMUNITY_DATA } from './Data'
 import { CommunityItem } from './CommunityItem'
@@ -18,6 +19,7 @@ export const Community = () => {
       maxWidth="48rem"
       paddingTop="10rem"
     >
+      <SeoHead pageKey="community" />
       <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
         Community
       </Heading>

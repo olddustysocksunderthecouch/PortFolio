@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+import { HelmetProvider } from 'react-helmet-async'
 import { customTheme } from './theme/theme'
 import 'focus-visible/dist/focus-visible'
 import './index.css'
@@ -17,9 +18,11 @@ const newTheme = {
 }
 
 ReactDOM.render(
-  <ChakraProvider theme={newTheme}>
-    <CSSReset />
-    <App />
-  </ChakraProvider>,
+  <HelmetProvider>
+    <ChakraProvider theme={newTheme}>
+      <CSSReset />
+      <App />
+    </ChakraProvider>
+  </HelmetProvider>,
   document.getElementById('root')
 )

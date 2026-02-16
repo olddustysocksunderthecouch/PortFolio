@@ -1,11 +1,12 @@
 import { ChevronDownIcon } from '@chakra-ui/icons'
-import { Button, Link, Menu, MenuButton, MenuItem, MenuList, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Button, Link, Menu, MenuButton, MenuItem, MenuList, useColorMode } from '@chakra-ui/react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
-  const navLinkBgHover = useColorModeValue('rgba(0, 0, 0, 0.7)', '#463d3de0')
   const { colorMode } = useColorMode()
   const { pathname } = useLocation()
+  const navLinkBgHover = colorMode === 'light' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(148, 163, 184, 0.26)'
+  const navActiveBg = colorMode === 'light' ? '#000' : 'mode.dark.tagBG'
 
   return text === 'Projects' ? (
     <Menu>
@@ -14,7 +15,7 @@ export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
         rightIcon={<ChevronDownIcon />}
         textDecoration={pathname.includes('projects') ? 'underline' : 'none'}
         activeStyle={{
-          background: colorMode === 'light' ? '#000' : '#252424e0',
+          background: navActiveBg,
           color: '#fff',
         }}
         background="none"
@@ -67,7 +68,7 @@ export const TopNavigationItem = ({ handleHideMobileMenu, link, text }) => {
       exact
       to={link}
       activeStyle={{
-        background: colorMode === 'light' ? '#000' : '#252424e0',
+        background: navActiveBg,
         color: '#fff',
       }}
       borderRadius={{ sm: '5px' }}

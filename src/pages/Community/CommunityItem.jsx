@@ -27,8 +27,13 @@ export const CommunityItem = ({ title, period, desc, links = [] }) => {
                   href={link.href}
                   isExternal
                   fontWeight="semibold"
-                  color={`mode.${colorMode}.career.text`}
+                  color={`mode.${colorMode}.link`}
                   textDecoration="underline"
+                  textUnderlineOffset="2px"
+                  _hover={{
+                    color: colorMode === 'light' ? 'primary.700' : 'primary.200',
+                    textDecorationThickness: '2px',
+                  }}
                 >
                   {link.label}
                 </Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Stack, Heading, Text, Image, useColorMode, Link, Button } from '@chakra-ui/react'
+import { SeoHead } from '../../components/SeoHead'
 import profileImage from './assets/profileImage.jpeg'
 
 export const Home = () => {
@@ -16,6 +17,7 @@ export const Home = () => {
       maxWidth="48rem"
       paddingTop="10rem"
     >
+      <SeoHead pageKey="home" />
       <Stack spacing={2} marginBottom={8}>
         <Stack as="flex" marginLeft="auto" marginRight="auto">
           <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
@@ -43,7 +45,17 @@ export const Home = () => {
           <Text color={`mode.${colorMode}.subtext`}>
             This website is about sharing some of my projects. If you'd like to learn more about my work experience and
             education, please visit my{' '}
-            <Link color="teal.500" href="https://www.linkedin.com/in/adrianbunge/">
+            <Link
+              href="https://www.linkedin.com/in/adrianbunge/"
+              isExternal
+              color={`mode.${colorMode}.link`}
+              textDecoration="underline"
+              textUnderlineOffset="2px"
+              _hover={{
+                color: colorMode === 'light' ? 'primary.700' : 'primary.200',
+                textDecorationThickness: '2px',
+              }}
+            >
               LinkedIn profile
             </Link>
             .

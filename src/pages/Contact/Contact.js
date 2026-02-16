@@ -1,5 +1,6 @@
 import React from 'react'
 import { Stack, Heading, Text, Image, useColorMode, Link } from '@chakra-ui/react'
+import { SeoHead } from '../../components/SeoHead'
 import profileImage from './assets/profileImage.jpeg'
 
 export const Contact = () => {
@@ -16,6 +17,7 @@ export const Contact = () => {
       maxWidth="48rem"
       paddingTop="10rem"
     >
+      <SeoHead pageKey="contact" />
       <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
         Contact Me! 👋
       </Heading>
@@ -25,7 +27,17 @@ export const Contact = () => {
             I'm always keen to chat about new projects and opportunities! <br />
             <br />
             If you'd like to get in touch, please send me a message on{' '}
-            <Link color="teal.500" href="https://www.linkedin.com/in/adrianbunge/">
+            <Link
+              href="https://www.linkedin.com/in/adrianbunge/"
+              isExternal
+              color={`mode.${colorMode}.link`}
+              textDecoration="underline"
+              textUnderlineOffset="2px"
+              _hover={{
+                color: colorMode === 'light' ? 'primary.700' : 'primary.200',
+                textDecorationThickness: '2px',
+              }}
+            >
               LinkedIn
             </Link>
           </Text>

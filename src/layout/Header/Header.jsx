@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Flex, Avatar, IconButton, useColorMode, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Avatar, IconButton, useColorMode } from '@chakra-ui/react'
 import { FiSun, FiMenu } from 'react-icons/fi'
 import { FaMoon } from 'react-icons/fa'
 import profileCartoon from './assets/profileCartoon.jpg'
@@ -16,8 +16,7 @@ export const Header = () => {
   const [show, setShow] = useState(false)
   const handleToggle = () => setShow(!show)
   const { colorMode, toggleColorMode } = useColorMode()
-  const navLinkBg = useColorModeValue('gray.50', 'gray.800')
-  const navLinkBgHover = useColorModeValue('rgba(0, 0, 0, 0.7)', '#463d3de0')
+  const navLinkBg = colorMode === 'light' ? 'gray.50' : 'mode.dark.cardBG'
 
   return (
     <Flex

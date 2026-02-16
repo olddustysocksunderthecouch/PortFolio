@@ -1,5 +1,6 @@
 import React from 'react'
 import { Heading, Spacer, Stack, Text, useColorMode } from '@chakra-ui/react'
+import { SeoHead } from '../../components/SeoHead'
 import { ProjectPhysicalItem } from './ProjectPhysicalItem'
 import { PROJECT_DATA } from './Data'
 
@@ -17,6 +18,7 @@ export const ProjectsPhysical = () => {
       paddingTop="10rem"
       px="1.5rem"
     >
+      <SeoHead pageKey="projectsPhysical" />
       <Heading Heading as="h1" size="2xl" color={`mode.${colorMode}.text`}>
         Physical Projects
       </Heading>
