@@ -34,7 +34,7 @@ export const Home = () => {
         <Stack as="flex">
           <Text color={`mode.${colorMode}.subtext`}>
             I love to design and build things! Some have succeeded and others have failed. The joy that comes from
-            creating something useful and learning is what keeps me going!
+            creating something useful and learning along the way!
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
             My main passion is building software that helps people. When I'm not coding, I love designing and building

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Heading, Text, Image, useColorMode } from '@chakra-ui/react'
+import { Stack, Heading, Text, Image, Link, useColorMode } from '@chakra-ui/react'
 import profileImage from './assets/profileImage.jpeg'
 
 export const About = () => {
@@ -37,9 +37,35 @@ export const About = () => {
             been a film editor, UX designer, software dev, meetup organiser, and a guy who starts up companies.
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
-            Right now, I'm building FindHomes as CEO/CTO - trying to fix the information asymmetry in SA property
-            because, honestly, buying a home shouldn't feel like a gamble. I wrote a book about it
-            book.findhomes.co.za/8laws
+            Right now, I'm building{' '}
+            <Link
+              href="https://www.findhomes.co.za"
+              isExternal
+              color={colorMode === 'light' ? 'blue.600' : 'blue.300'}
+              textDecoration="underline"
+              textUnderlineOffset="2px"
+              _hover={{
+                color: colorMode === 'light' ? 'blue.700' : 'blue.200',
+                textDecorationThickness: '2px'
+              }}
+            >
+              FindHomes
+            </Link>{' '}
+            as CEO/CTO - trying to fix the information asymmetry in SA property because, honestly, buying a home
+            shouldn't feel like a gamble. I wrote a book about it.{' '}
+            <Link
+              href="https://book.findhomes.co.za/8laws"
+              isExternal
+              color={colorMode === 'light' ? 'blue.600' : 'blue.300'}
+              textDecoration="underline"
+              textUnderlineOffset="2px"
+              _hover={{
+                color: colorMode === 'light' ? 'blue.700' : 'blue.200',
+                textDecorationThickness: '2px'
+              }}
+            >
+              Read it here!
+            </Link>
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
             Aside from property and tech, I love hiking, rock climbing in wild places, and I'm slowly improving my golf
