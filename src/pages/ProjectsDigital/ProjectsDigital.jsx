@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, Spacer, Stack, Text, useColorMode } from '@chakra-ui/react'
-import { ProjectDesignItem } from './ProjectDesignItem'
+import { ProjectDesignItem } from './ProjectDigitalItem'
 import { PROJECT_DATA } from './Data'
 
 export const ProjectsDigital = () => {
@@ -38,6 +38,7 @@ export const ProjectsDigital = () => {
           desc={project.desc}
           tech={project.tech}
           image={project.image}
+          links={project.links}
           colorMode={colorMode}
         />
       ))}
