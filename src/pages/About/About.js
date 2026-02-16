@@ -33,15 +33,18 @@ export const About = () => {
         </Stack>
         <Stack as="flex">
           <Text color={`mode.${colorMode}.subtext`}>
-            I studied geology but didn't want to work as one, so I taught myself digital things. I've been a film
-            editor, a graphic & UX designer, software developer, meetup organiser and a guy who starts up companies.
+            Hi, I'm Adrian! I studied geology but didn't want to work as one, so I taught myself digital things. I've
+            been a film editor, UX designer, software dev, meetup organiser, and a guy who starts up companies.
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
-            I love hiking & rock climbing in wild places, and I'm slowly improving my golf swing.
+            Right now, I'm building FindHomes as CEO/CTO - trying to fix the information asymmetry in SA property
+            because, honestly, buying a home shouldn't feel like a gamble. I wrote a book about it
+            book.findhomes.co.za/8laws
           </Text>
           <Text color={`mode.${colorMode}.subtext`}>
-            I believe that everything, everywhere ends, and all that will be left of you is what was in your heart. So
-            be generous, help others and above all don't be an asshole.
+            Aside from property and tech, I love hiking, rock climbing in wild places, and I'm slowly improving my golf
+            swing. I believe that everything, everywhere ends, and all that will be left of you is what was in your
+            heart. So be generous, help others, and above all, don't be an asshole.
           </Text>
         </Stack>
       </Stack>

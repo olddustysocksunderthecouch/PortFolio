@@ -1,6 +1,8 @@
 import React from 'react'
-import { Stack, Heading, Text, Image, useColorMode } from '@chakra-ui/react'
+import { Stack, Heading, Text, Image, Spacer, useColorMode } from '@chakra-ui/react'
 import communityImage from './assets/communityImage.jpg'
+import { COMMUNITY_DATA } from './Data'
+import { CommunityItem } from './CommunityItem'
 
 export const Community = () => {
   const { colorMode } = useColorMode()
@@ -33,12 +35,20 @@ export const Community = () => {
         </Stack>
         <Stack as="flex">
           <Text color={`mode.${colorMode}.subtext`}>
-            I've been involved in the tech community for a long time. I've organised meetups, conferences and
-            hackathons. I've also been a mentor and a mentee. I've been a speaker and a listener. I've been a teacher
-            and a student.
+            I've been involved in the tech community for a long time. I love to learn, teach and bring people together!
           </Text>
         </Stack>
       </Stack>
+      <Spacer />
+      {COMMUNITY_DATA.map((community, index) => (
+        <CommunityItem
+          key={index}
+          title={community.title}
+          period={community.period}
+          desc={community.desc}
+          links={community.links}
+        />
+      ))}
     </Stack>
   )
 }
