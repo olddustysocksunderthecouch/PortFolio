@@ -2,7 +2,7 @@ import profileImage from '../pages/About/assets/profileImage.jpeg'
 import digitalImage from '../pages/ProjectsDigital/assets/FindHomes.jpeg'
 import physicalImage from '../pages/ProjectsPhysical/assets/hydroponics1.jpeg'
 import designImage from '../pages/ProjectsDesign/assets/snowStars.jpg'
-import communityImage from '../pages/Community/assets/communityImage.jpg'
+import googleDeveloperGroup from '../pages/Community/assets/googleDeveloperGroup.jpg'
 import contactImage from '../layout/Header/assets/profileCartoon.jpg'
 
 export const SITE_ORIGIN = 'https://portfolio-a41f9.web.app'
@@ -61,7 +61,7 @@ export const SEO_CONTENT = {
     ogDescription:
       'See Adrian Bunge’s community work, meetups, and developer initiatives.',
     canonicalPath: '/projects-community',
-    imageUrl: `${SITE_ORIGIN}${communityImage}`,
+    imageUrl: `${SITE_ORIGIN}${googleDeveloperGroup}`,
   },
   contact: {
     title: 'Contact Adrian Bunge',

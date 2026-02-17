@@ -23,7 +23,9 @@ export const ProjectPhysicalItem = ({ title, desc, images }) => {
           </Stack>
         </Box>
         <Flex w="100%" h="100%" alignItems="center" ml={{ sm: '0', md: '4' }} pt={{ sm: '4', md: '0' }}>
-          <ImageGallery items={images} showBullets showPlayButton={false} />
+          <Box w="100%" className="physical-project-gallery">
+            <ImageGallery items={images} showBullets showPlayButton={false} />
+          </Box>
         </Flex>
       </Grid>
     </Stack>

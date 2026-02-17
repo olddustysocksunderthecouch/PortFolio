@@ -1,4 +1,3 @@
-import indieHackers from './assets/indieHackers.webp'
 import garden from './assets/garden.jpeg'
 import garden2 from './assets/garden2.jpg'
 import garden3 from './assets/garden3.jpg'
